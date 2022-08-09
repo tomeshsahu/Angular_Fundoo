@@ -1,0 +1,58 @@
+
+  
+    <div class="navbarr" >
+      <button type="button" mat-button (click)="drawer.toggle()">
+     <button mat-icon-button class="icon-btn">
+     <div><img style="width:21px" src="/assets/menu.png"/></div>
+    </button>
+    </button>
+    <div class="fun"><img src="assets/keep.png" /><span >FundooNote</span></div>
+ 
+
+   
+      <div class="searchbody">
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+              <img src="/assets/searchicon.png" alt="menu icon" width="20px">
+          </button>
+          <input type="search" class="inputtxt" autocomplete="off" placeholder="search"  id="name">
+      </div>
+
+  
+
+ <div class="header-icon">
+    <button mat-icon-button class="icon">
+      <img style="width:21px;margin-right:60px;" src="/assets/refresh.png"/>
+     </button>
+     <button mat-icon-button class="icon">
+      <img style="width:21px" src="/assets/dynamic.png"/>
+     </button>
+     <button mat-icon-button class="icon">
+      <img style="width:21px;" src="/assets/setting.png"/>
+     </button>
+     <button mat-icon-button class="icon">
+      <img style="width:21px;" src="/assets/all.png"/>
+     </button>
+     <button mat-icon-button class="icon">
+      <img style="width:21px;" src="/assets/user.png"/>
+     </button>
+</div>
+  </div>
+
+  <mat-drawer-container class="example-container" autosize>
+
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+
+      <a href="#" class="v"><img src="assets/notes.png" class="icon2"/><span class="note2">Notes</span> </a><br>
+      <a href="#"><img src="assets/reminder.png" class="icon2"/><span class="note2"> reminder</span> </a><br>
+      <a href="#"><img src="assets/edit.png" class="icon2"/><span class="note2">Edit Label</span> </a><br>
+      <a href="#"><img src="assets/archive.png" class="icon2"/><span class="note2">Archive</span> </a><br>
+      <a href="#"><img src="assets/trash.png" class="icon2"/><span class="note2">Trash</span> </a><br>
+      <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p> -->
+
+    </mat-drawer>
+  
+
+  
+  </mat-drawer-container>
+  
+ 

@@ -1,0 +1,135 @@
+
+.navbarr{
+  background-color: white;
+position:fixed;
+z-index:2;
+width:200%;
+display: flex;
+flex-direction: row;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+//   .searchbody{
+//     background-color:#f1ebeb;
+//     border-radius: 10px;
+//     width:40%;
+//     border:0px;
+//     text-align:center;
+// }
+ 
+// .inputtxt{
+//   background-color:#f1ebeb;
+//   width:70%;
+//   height: 30px;
+//   font-size: medium;
+//   outline: none;
+//   border:0px;
+// }
+
+
+
+
+
+// .search{
+  //     background-color:white ;
+  //     margin-left: 60px;
+  //     padding:16px;
+  //     border-radius: 10px;
+  //     width:60%;
+  //     border:0px;
+  //     background-image: url(/assets/searchicon.png);
+  //     background-repeat: no-repeat;
+  //     text-align: left;
+  //     background-image:#F5F5F5 ;
+  //     box-shadow: 1px 1px 3px 1px #888888;
+  //     position: relative;
+  // }
+.search:hover{
+    border:0px solid grey;
+}
+
+  .fun{
+      font-size: 21px;
+      position: relative;
+      font-family: "roboto", "Noto Sans Myanmar UI", arial, sans-serif;
+      color:#272525;
+  }
+  .header-icon{
+    float: right;
+    margin-right:30px;
+    padding-left:70px;
+  }
+
+  .icon{
+    color:#888888;
+ 
+    padding-right: 20px; 
+    position: relative;
+    width:21px;
+    top:10px;
+    margin-right: 20px;
+  }
+
+  .keep{
+      height: 40px;
+      width: 40px;
+      position: relative;
+      right:10px;
+      top:10px;
+  }
+
+  //sidenabar
+  .example-container {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 30px;
+    position: absolute;
+    top:80px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  //costom style for sidebar
+  .icon2{
+    height: 25px;
+    width:25px;
+  color:#888888;
+  padding:10px;
+  position: relative;
+
+  }
+  
+  .note2{
+      font-size: 14px;
+      font-weight: bold;
+      position: relative;
+      bottom:20px;
+      margin-left:20px;
+  }
+  .v{
+      border-radius: 1px 10px 10px 1px;
+      background-color:#FEEFC3;
+      height: 100px;
+      width:30%;
+      padding-top: 30px;
+      padding-right: 40px; 
+  }
+  a{
+      text-decoration: none;
+      color:black;
+  }
+///sample search
+
+
