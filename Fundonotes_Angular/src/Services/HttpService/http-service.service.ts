@@ -14,5 +14,15 @@ baseUrl=environment.baseurl;
     {
         return this.httpClient.post(this.baseUrl+url,reqdata,token && httpOptions);
     }
+
+    getservice(url:string='', token: boolean=false, httpOptions: any={})
+    {
+        return this.httpClient.get(this.baseUrl+url,token && httpOptions);
+    }
+
+    putService(url:string, reqdata:any, token:boolean=false, httpOptions: any = {} ){
+      console.log(reqdata);
+      return this.httpClient.put(this.baseUrl+url, reqdata, token && httpOptions)
+    }
 }
 

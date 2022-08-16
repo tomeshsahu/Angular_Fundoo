@@ -1,4 +1,6 @@
-
+.sit{
+  box-shadow:1px 1px 1px 0.1px grey;
+}
 .navbarr{
   background-color: white;
 position:fixed;
@@ -11,41 +13,42 @@ flex-direction: row;
     flex: 1 1 auto;
   }
 
-//   .searchbody{
-//     background-color:#f1ebeb;
-//     border-radius: 10px;
-//     width:40%;
-//     border:0px;
-//     text-align:center;
-// }
- 
-// .inputtxt{
-//   background-color:#f1ebeb;
-//   width:70%;
-//   height: 30px;
-//   font-size: medium;
-//   outline: none;
-//   border:0px;
-// }
+  .searchbody{
+    background-color:#F1F3F4;
+    border-radius: 10px;
+    width:90%;
+    padding:4px;
+    position: relative;
+    left:3%;
+}
 
 
+.inputtxt{
+    background-color:#F1F3F4;
+    width:80%;
+    height: 30px;
+    font-size: medium;
+    outline: none;
+    border:none;
+}
+.searchbody:active{
+    background-color: white;
+}
+.inputtxt:active{
+    background-color: white;
 
+}
 
+.searchbody:hover{
+    background-color: white;
+    border-width: thin;
+    border:1px solid #e3dede;
+    
+}
+.inputtxt:hover{
+    background-color: white;
+}
 
-// .search{
-  //     background-color:white ;
-  //     margin-left: 60px;
-  //     padding:16px;
-  //     border-radius: 10px;
-  //     width:60%;
-  //     border:0px;
-  //     background-image: url(/assets/searchicon.png);
-  //     background-repeat: no-repeat;
-  //     text-align: left;
-  //     background-image:#F5F5F5 ;
-  //     box-shadow: 1px 1px 3px 1px #888888;
-  //     position: relative;
-  // }
 .search:hover{
     border:0px solid grey;
 }
@@ -55,21 +58,20 @@ flex-direction: row;
       position: relative;
       font-family: "roboto", "Noto Sans Myanmar UI", arial, sans-serif;
       color:#272525;
+      bottom:14px;
+   
   }
-  .header-icon{
-    float: right;
-    margin-right:30px;
-    padding-left:70px;
-  }
+
 
   .icon{
     color:#888888;
- 
     padding-right: 20px; 
     position: relative;
     width:21px;
-    top:10px;
+    left:90%;
     margin-right: 20px;
+    padding:5px;
+    bottom:9px;
   }
 
   .keep{
@@ -79,57 +81,154 @@ flex-direction: row;
       right:10px;
       top:10px;
   }
-
-  //sidenabar
-  .example-container {
-    width: 100%;
-    height: 500px;
-  }
-  
-  .example-sidenav-content {
+  .lastitems{
+    color:#888888;
+    padding-right: 20px; 
+    position: relative;
+    width:21px;
+    margin-right: 20px;
+    padding:5px;
+    bottom:4px;
     display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .example-sidenav {
-    padding: 30px;
-    position: absolute;
-    top:80px;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
+    flex-direction: row;
+    left:134px;
+}
+.account{
+  color:#888888;
+  position: relative;
+  width:21px;
+  margin-right: 20px;
+  padding:5px;
+  bottom:4px;
+  display: flex;
+  flex-direction: row;
+  left:260px;
+}
+  //sidenabar
 
   //costom style for sidebar
-  .icon2{
-    height: 25px;
-    width:25px;
-  color:#888888;
-  padding:10px;
-  position: relative;
+ 
 
-  }
+
+.menu-items{
+  list-style: none;
+  line-height: 40px;
+  padding-left: 0px;
   
-  .note2{
-      font-size: 14px;
-      font-weight: bold;
-      position: relative;
-      bottom:20px;
-      margin-left:20px;
-  }
-  .v{
-      border-radius: 1px 10px 10px 1px;
-      background-color:#FEEFC3;
-      height: 100px;
-      width:30%;
-      padding-top: 30px;
-      padding-right: 40px; 
-  }
-  a{
-      text-decoration: none;
-      color:black;
-  }
-///sample search
+}
+.menu-items ul{
+  display: flex;
+  justify-content: center;
+
+}
+.sideb{
+  position: fixed;
+  top:10%;
+}
+
+.menu-items li{
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 25px;
+  padding-top: 8px;
+  border-radius: 10px 40px 40px 10px;
+
+  cursor: pointer;
+}
+
+.menu-items li:hover{
+  background-color: #f1ebeb;
+}
+
+.onActive{
+  background-color: #FEEFE2;
+}
+
+.sideicon{
+  margin-right: 23px;
+  padding-top: 2px;
+}
+.selcetIcon{
+  padding-top: 0;
+}
 
 
+//note Style
+
+.add-note-section {
+  margin-left: 25%;
+  width: 50%;
+}
+
+.mat-input {
+  width: 100%;
+}
+
+.notes-section{
+  width: 50%;
+  margin-left: 25%;
+}
+
+mat-card {
+  display: inline-flex;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+//Add Note
+.notebody{
+    width:200px;
+    border-radius: 10px;
+    box-shadow:1px 1px 5px 1px grey;
+    position: relative;
+    left:390px;
+    width:45%;
+    top:100px;
+    background-color: white;
+    height: 35%;
+}
+.notebody:actice{
+  height:90px;
+  top:100px;
+  left:390px;
+}
+// .notebody1{
+//   width:200px;
+//   border-radius: 10px;
+//   box-shadow:1px 1px  1px grey;
+//   position: relative;
+//   left:390px;
+//   width:15%;
+//   top:100px;
+//   background-color: white;
+//   height: 55px;
+// }
+
+.book{
+  background-color:white;
+  width:50%;
+  height: 65%;
+  padding:15px;
+  font-size: medium;
+  outline: none;
+  border:0px;
+  font-weight: bold;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+.book:hover{
+  background-color: white;
+  border: none;
+  outline:none;
+}
+.book2{
+  background-color: white;
+  width:70%;
+  height:30px;
+  outline:none;
+  border:none;
+  margin-top: 7px;
+  margin-left:20px;
+  font-size: medium;
+  font-weight: bold;
+}

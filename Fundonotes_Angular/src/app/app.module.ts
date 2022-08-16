@@ -20,6 +20,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {FormsModule} from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { CreateNoteComponent } from './create-note/create-note.component';
+import { DisplayNoteComponent } from './display-note/display-note.component';
+import { GetAllNotesComponent } from './get-all-notes/get-all-notes.component';
+import { UpdatenoteComponent } from './updatenote/updatenote.component';
+import { TrashnoteComponent } from './trashnote/trashnote.component';
+import { ArchievenoteComponent } from './archievenote/archievenote.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { IconComponent } from './icon/icon.component';
 
 
 
@@ -30,7 +39,14 @@ import { MatInputModule } from '@angular/material/input';
     LoginComponent,
     ResetPasswordComponent,
     ForgatePasswordComponent,
-    DashboardComponent
+    DashboardComponent,
+    CreateNoteComponent,
+    DisplayNoteComponent,
+    GetAllNotesComponent,
+    UpdatenoteComponent,
+    TrashnoteComponent,
+    ArchievenoteComponent,
+    IconComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +64,8 @@ import { MatInputModule } from '@angular/material/input';
     ReactiveFormsModule,
     FormsModule,
     MatInputModule,
+    MatDialogModule,
+    MatSnackBarModule
     
 
   ],

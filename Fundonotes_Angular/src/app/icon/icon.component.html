@@ -1,0 +1,41 @@
+<div class="iconbody">
+    <button mat-icon-button class="example-icon2"
+        aria-label="Example icon-button with menu icon">
+        <img src="/assets/reminder.png" alt="menu icon" width="18px">
+    </button>
+    <button mat-icon-button class="example-icon2" aria-label="Example icon-button with menu icon">
+        <img src="/assets/collabarator.png" alt="menu icon" width="18px">
+    </button>
+    <button mat-icon-button class="example-icon2" aria-label="Example icon-button with menu icon">
+        <img src="/assets/paintbox.png" alt="menu icon" width="18px">
+    </button>
+    <button mat-icon-button class="example-icon2" aria-label="Example icon-button with menu icon">
+        <img src="/assets/image.png" alt="menu icon" width="18px">
+    </button>
+    <button mat-icon-button class="example-icon2" aria-label="Example icon-button with menu icon">
+        <img src="/assets/archive.png" alt="menu icon" width="18px">
+    </button>
+    
+    <button mat-icon-button class="example-icon2"  [matMenuTriggerFor]="menu" aria-label="Example icon-button with menu icon">
+        <img src="/assets/more.png" alt="menu icon" width="18px">
+    </button>
+    
+    <mat-menu #menu="matMenu">
+        
+        <button mat-menu-item  (click)="TrashNote()">         
+          <span>Delete Note</span>
+        </button>
+       
+        <button mat-menu-item>
+          <span>Add Lable</span>
+        </button>
+        <button mat-menu-item>
+          <span>Add Drawing</span>
+        </button>
+        <button mat-menu-item>
+            <span>Make a copy</span>
+          </button>
+         
+      </mat-menu>
+      
+</div>

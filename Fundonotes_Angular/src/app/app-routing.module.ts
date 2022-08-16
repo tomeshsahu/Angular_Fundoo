@@ -5,6 +5,9 @@ import { ForgatePasswordComponent } from './forgate-password/forgate-password.co
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { GetAllNotesComponent } from './get-all-notes/get-all-notes.component';
+import { ArchievenoteComponent } from './archievenote/archievenote.component';
+import { TrashnoteComponent } from './trashnote/trashnote.component';
 
 const routes: Routes = [
   {
@@ -12,7 +15,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: '',
+    path: 'register',
     component: RegistrationComponent
   },
   {
@@ -23,10 +26,13 @@ const routes: Routes = [
     path:'forgatepassword',
     component:ForgatePasswordComponent
   },
-  {
-    path:'dashboard',
-    component:DashboardComponent
-  }
+  {path:"home",component:DashboardComponent,
+  children:[
+    {path:"",redirectTo:"/home/notes",pathMatch:'full'},
+    {path:"notes", component:GetAllNotesComponent},
+    {path:"archive", component:ArchievenoteComponent},
+    {path:"trash", component:TrashnoteComponent}
+  ]},
 ];
 
 @NgModule({

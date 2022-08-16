@@ -1,58 +1,79 @@
-
   
-    <div class="navbarr" >
-      <button type="button" mat-button (click)="drawer.toggle()">
+  <mat-toolbar class="navbarr sit" >
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="sidenav.toggle();">
      <button mat-icon-button class="icon-btn">
-     <div><img style="width:21px" src="/assets/menu.png"/></div>
+     <div calss="icon"><img style="width:21px" src="/assets/menu.png"/></div>
     </button>
     </button>
-    <div class="fun"><img src="assets/keep.png" /><span >FundooNote</span></div>
- 
-
+    <div class=""><img src="assets/keep.png" /><span class="fun">FundooNote</span></div>
    
       <div class="searchbody">
           <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
               <img src="/assets/searchicon.png" alt="menu icon" width="20px">
           </button>
           <input type="search" class="inputtxt" autocomplete="off" placeholder="search"  id="name">
+      </div> 
+
+      <div class="lastitems">
+        <div>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <img src="/assets/refresh.png" alt="menu icon" width="25px">
+            </button>
+        </div>
+        <div>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <img src="assets/dynamic.png" alt="menu icon" width="25px">
+            </button>
+        </div>
+        <div>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <img src="/assets/setting.png" alt="menu icon" width="25px">
+            </button>
+        </div>
+    </div>
+     
+    <div class="account">
+      <div>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+              <img src="/assets/all.png" alt="menu icon" width="25px">
+          </button>
+      </div>
+      <div>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+              <img src="/assets/user.png" alt="menu icon" width="25px">
+          </button>
       </div>
 
-  
-
- <div class="header-icon">
-    <button mat-icon-button class="icon">
-      <img style="width:21px;margin-right:60px;" src="/assets/refresh.png"/>
-     </button>
-     <button mat-icon-button class="icon">
-      <img style="width:21px" src="/assets/dynamic.png"/>
-     </button>
-     <button mat-icon-button class="icon">
-      <img style="width:21px;" src="/assets/setting.png"/>
-     </button>
-     <button mat-icon-button class="icon">
-      <img style="width:21px;" src="/assets/all.png"/>
-     </button>
-     <button mat-icon-button class="icon">
-      <img style="width:21px;" src="/assets/user.png"/>
-     </button>
 </div>
-  </div>
 
-  <mat-drawer-container class="example-container" autosize>
+  </mat-toolbar>
 
-    <mat-drawer #drawer class="example-sidenav" mode="side">
 
-      <a href="#" class="v"><img src="assets/notes.png" class="icon2"/><span class="note2">Notes</span> </a><br>
-      <a href="#"><img src="assets/reminder.png" class="icon2"/><span class="note2"> reminder</span> </a><br>
-      <a href="#"><img src="assets/edit.png" class="icon2"/><span class="note2">Edit Label</span> </a><br>
-      <a href="#"><img src="assets/archive.png" class="icon2"/><span class="note2">Archive</span> </a><br>
-      <a href="#"><img src="assets/trash.png" class="icon2"/><span class="note2">Trash</span> </a><br>
-      <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p> -->
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side"style="width:16% ;" class="sideb">
+     
+            <ul class="menu-items product">
+                <li (click)="goTo('Notes')" (click)="notes()" [ngClass]="{'onActive':selectedMenu == 'Notes'}"><img class="sideicon" src="/assets/notes.png"  alt="menu icon" width="18px"><span class="text-data">Notes</span></li>
+                <li (click)="goTo('Remainders')" [ngClass]="{'onActive':selectedMenu == 'Remainders'}"><img class="sideicon" src="/assets/reminder.png" alt="menu icon" width="20px"><span class="text-data">Remainders</span></li>
+                <li (click)="goTo('Edit')" [ngClass]="{'onActive':selectedMenu == 'Edit'}"><img class="sideicon" src="/assets/edit.png" alt="menu icon" width="20px"><span class="text-data">Edit label</span></li>
+                <li (click)="goTo('Archive')" (click)="archive()" [ngClass]="{'onActive':selectedMenu == 'Archive'}"><img class="sideicon" src="/assets/archive.png" alt="menu icon" width="20px"><span class="text-data">Archive</span></li>
+                <li (click)="goTo('Trash')" (click)="trash()" [ngClass]="{'onActive':selectedMenu == 'Trash'}"><img class="sideicon" src="/assets/trash.png" alt="menu icon" width="20px"><span class="text-data">Trash</span></li>
+            </ul>
+            <!-- <a mat-list-item>Home</a>
+            <a mat-list-item>Account</a>
+            <a mat-list-item>About us</a>
+            <a mat-list-item>Contact Us</a>
+            <a mat-list-item>Help</a> -->
 
-    </mat-drawer>
-  
-
-  
-  </mat-drawer-container>
-  
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 88vh;">
+            <router-outlet></router-outlet>
+               </div>
+    </mat-sidenav-content>
  
+</mat-sidenav-container>
+ 
+
+
+

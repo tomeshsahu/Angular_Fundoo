@@ -1,0 +1,52 @@
+<div class="container product">
+    <div class="searchbody">
+        <div class="notebody">
+            <form [formGroup]="CreateNoteForm">
+
+                <input type="text" autocomplete="off" formControlName="title" *ngIf="closenote" class="notetext"
+                    style="width:80%" placeholder="Title" />
+
+                <input type="text" autoccomplete="off" formControlName="description" class="notetext"
+                    (click)="opennote()" placeholder="Type a Note..." />
+
+                <a *ngIf="openIcon"> <button mat-icon-button class="example-icon"
+                        aria-label="Example icon-button with menu icon">
+                        <img src="/assets/checkbox.png" alt="menu icon" width="25px">
+                    </button>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                        <img src="/assets/paint.png" alt="menu icon" width="25px">
+                    </button>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                        <img src="/assets/image.png" alt="menu icon" width="25px">
+                    </button>
+                </a>
+
+                <div *ngIf="openIcon2"> <button mat-icon-button class="example-icon2"
+                        aria-label="Example icon-button with menu icon">
+                        <img src="/assets/reminder.png" alt="menu icon" width="21px">
+                    </button>
+                    <button mat-icon-button class="example-icon2" aria-label="Example icon-button with menu icon">
+                        <img src="/assets/collabarator.png" alt="menu icon" width="21px">
+                    </button>
+                    <button mat-icon-button class="example-icon2" aria-label="Example icon-button with menu icon">
+                        <img src="/assets/paintbox.png" alt="menu icon" width="21px">
+                    </button>
+                    <button mat-icon-button class="example-icon2" aria-label="Example icon-button with menu icon">
+                        <img src="/assets/image.png" alt="menu icon" width="21px">
+                    </button>
+                    <button mat-icon-button class="example-icon2" aria-label="Example icon-button with menu icon">
+                        <img src="/assets/archive.png" alt="menu icon" width="21px">
+                    </button>
+                    <button mat-icon-button class="example-icon2" aria-label="Example icon-button with menu icon">
+                        <img src="/assets/more.png" alt="menu icon" width="21px">
+                    </button>
+
+                    <button mat-icon-button class="notetext2" (click)="close()"  (click)="onSubmit()"
+                        aria-label="Example icon-button with menu icon">
+                        close
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
